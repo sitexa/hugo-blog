@@ -1,0 +1,45 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "南方﹒时代"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "sitexa" #Enable comments by entering your Disqus shortname
+googleAnalytics = "" #Enable Google Analytics by entering your tracking id
+[[menu.main]]
+    name = "home"
+    weight = -100
+    identifier = "post"
+    url = "/post/"
+
+[Author] # Used in authorbox
+    name = "南方"
+    bio = "Oscar Peng's true identiry is unkown. Maybe he is a successful blogger or writer."
+    avatar = "img/avatar.png"
+
+[Params]
+    #subtitle = "南方笔记" # Subtitle of your site. Used in site header
+    description = " 南方读书学习笔记 " # Description of your site.
+    opengraph = true # Enable OpenGraph if true
+    readmore = false  # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    authorbox = true # Show authorbox at bottom of pages if true
+    post_navigation = true # Show post navigation at bottom of pages if true
+    postSections = ["post"] # the section pages to show on home page and the "Recent articles" widget
+    #postSections = ["blog","news"] # alternative that shows more than one section's pages
+    dateformat = "2006-01-02" # change the format of dates
+
+[Params.widgets]
+    search = false # Enable "Search" widget
+    recent_articles = true #Enable "Recent articles" widget
+    recent_articles_num = 5 # Set the number of articles in the "Recent articles" widget
+    categories = true # Enable "Categories" widget
+    tags = true #Enable "Tags" widget
+    tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+    #Enable "Social" widget, if any of "social_*" set a value
+    #social_facebook = "xnpeng"
+    #social_twitter = "xnpeng"
+    #social_linkedin = "xnpeng"
+    social_github = "xnpeng"
+    social_email = "xnpeng@163.com"
+

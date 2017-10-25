@@ -6,14 +6,14 @@ theme = "mainroad"
 disqusShortname = "sitexa" #Enable comments by entering your Disqus shortname
 googleAnalytics = "" #Enable Google Analytics by entering your tracking id
 [[menu.main]]
-    name = "home"
+    name = "首页"
     weight = -100
     identifier = "post"
     url = "/post/"
 
 [Author] # Used in authorbox
-    name = "南方"
-    bio = "南方's true identiry is unkown. Maybe he is a successful blogger or writer."
+    name = "南方"
+    bio = "南方's true identiry is unkown. Maybe he is a successful blogger or writer."
     avatar = "img/avatar.png"
 
 [Params]

@@ -1,9 +1,9 @@
 ---
-title: "About Hugo"
+title: "关于南方﹒时代"
 date: "2014-04-09"
 menu: 
     main:
-        name: about
+        name: 关于
         weight: 1000
 ---
 

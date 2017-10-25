@@ -1,6 +1,13 @@
 # hugo-blog
 My blog site made by hugo. Ref: https://gohugo.io/hosting-and-deployment/hosting-on-github/
 
+## Host
+
+netlify.com
+
+-   add variable or not?
+hugo version : 0.30.2
+
 # MIT License
 
 Copyright (c) 2017 Oscar Peng

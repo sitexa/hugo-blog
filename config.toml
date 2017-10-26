@@ -6,7 +6,7 @@ theme = "mainroad"
 disqusShortname = "sitexa" #Enable comments by entering your Disqus shortname
 googleAnalytics = "" #Enable Google Analytics by entering your tracking id
 [[menu.main]]
-    name = "首页"
+    name = "博客"
     weight = -100
     identifier = "post"
     url = "/post/"
@@ -18,7 +18,7 @@ googleAnalytics = "" #Enable Google Analytics by entering your tracking id
 
 [Params]
     #subtitle = "南方笔记" # Subtitle of your site. Used in site header
-    description = " 南方读书学习笔记 " # Description of your site.
+    description = " 南方博客" # Description of your site.
     opengraph = true # Enable OpenGraph if true
     readmore = false  # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true

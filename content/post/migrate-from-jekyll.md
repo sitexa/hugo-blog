@@ -7,7 +7,6 @@ menu:
     weight: 100
 prev: /tutorials/mathjax
 title: Migrate to Hugo from Jekyll
-weight: 10
 ---
 
 ## Move static content to `static`

@@ -1,5 +1,9 @@
 {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-<div class="comments">
+<!-- div class="comments">
 	{{ template "_internal/disqus.html" . }}
-</div>
+</div -->
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2147753"></script>
+<!-- UY END -->
 {{ end }}

@@ -1,6 +1,6 @@
 +++
 title = "Meteor:开发Web应用和移动应用的利器（2）"
-description = "Meteor，是开发现代Web应用和移动应用的JavaScript全栈式平台。"
+description = "title:应用程序组织结构"
 tags = [
     "JavaScript",
     "NodeJs",
@@ -15,8 +15,6 @@ categories = [
 ]
 thumbnail = "images/meteor-logo.jpg"
 +++
-
-#   应用程序组织结构
 
 本章讨论如何使用 ES2015 模块构建您的Meteor应用程序, 将代码发送到客户端和服务器, 并将代码拆分为多个应用程序。
 

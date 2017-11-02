@@ -1,5 +1,5 @@
 +++
-title = "Meteor:开发现代Web应用和移动应用的利器"
+title = "Meteor:开发Web应用和移动应用的利器（1）"
 description = "Meteor，是开发现代Web应用和移动应用的JavaScript全栈式平台。"
 tags = [
     "JavaScript",
@@ -27,12 +27,12 @@ thumbnail = "images/meteor_logo.png"
 ## 什么是Meteor?
 
 据官网宣称，Meteor是一款极其牛叉的工具。它是一款开发现代Web应用和移动应用的全栈式JavaScript开发平台。它包含了构建连接到
-客户端的反应式应用程序(connected-client reactive applications)的关键技术集，一个构建工具，一些从Node.js和普通JavaScript
+客户端的反应式应用程序(connected-client reactive applications)的关键技术集，一套构建工具，一些从Node.js和JavaScript
 社区精选的工具包(package)。
 
 -   用一种语言开发：JavaScript，在所有环境使用：应用服务器、Web浏览器、和移动设备。【一剑在手，天下行走！老外真能吹。】
 -   使用在线数据(data on the wire)【对应的是data on the disk】，表示服务器发送数据，而不是HTML，客户端宣染数据。
--   Meteor拥抱JavaScript生态系统，把极其活跃的社区中的精心选择的最好的东西带给你。
+-   Meteor拥抱JavaScript生态系统，把极其活跃的社区中的精心选择的最好的东西介绍给你。
 -   Meteor提供全栈反应能力，让你的UI以最小的努力无逢的反应世界的真实状态。
 
 ## 快速开始
@@ -76,10 +76,10 @@ meteor
 
 ## 什么是Meteor指南？
 
-本指南收集了一些文章，罗列了使用Meteor平台开发应用程序的最佳实践。目标涵盖了现代Web应用和移动应用开发的通用模式，所以文中
-提到的一些概念不仅适用于Meteor，也可应用于任何现代应用程序、用户交互的工作。
+本指南收集了一些文章，罗列了使用Meteor平台开发应用程序的最佳实践。涵盖了现代Web应用和移动应用开发的通用模式，所以文中
+提到的一些概念不仅适用于Meteor，也可应用于任何现代应用程序、用户交互的开发工作。
 
-这份指南并非构建meteor应用程序*必须*遵守的，你当然可以使用不同的甚至相反的方法使用meteor平台。然而，本指南尝试给出一个最佳
+这份指南并非构建meteor应用程序 **必须** 遵守的，你当然可以使用不同的甚至相反的方法使用meteor平台。然而，本指南尝试给出一个最佳
 实践和社区公约，希望社区的多数人能够在使用该指南的时候获得帮助。
 
 Meteor平台的API文档可以从[文档中心](https://docs.meteor.com/)获得，你可以在[Atmosphere](https://atmospherejs.com/)
@@ -87,12 +87,12 @@ Meteor平台的API文档可以从[文档中心](https://docs.meteor.com/)获得�
 
 ### 目标读者
 
-本指南的目标读者是有一定基础的开发者，熟悉JavaScript、meteor平台、web应用。如果你是meteor的新手，建议你学习官司方的
+本指南的目标读者是有一定基础的开发者，熟悉JavaScript、meteor平台、web应用。如果你是meteor的新手，建议你学习官方的
 [入门教程](https://www.meteor.com/tutorials/blaze/creating-an-app)。
 
 ### 示例应用
 
-很多文章都引用了Todos应用程序，该程序的代码是在伴随本指南逐步开发出来的。你可以在[github](https://github.com/meteor/todos)中查看代码、提交issue或者通过
+许多文章都引用了Todos示例应用程序，该程序的代码是在本指南开发过程中开发出来的。你可以在[github](https://github.com/meteor/todos)中查看代码、提交issue或者通过
 提交PR修改代码。
 
 ##  指南的编写
@@ -104,16 +104,14 @@ Meteor平台的API文档可以从[文档中心](https://docs.meteor.com/)获得�
 
 ### 目标
 
-本指南里决策和最佳实践都是观点鲜明的。我们将突出一些确定的最佳实践，而忽略掉其他的解决方案。在开发应用的过程中，我们努力
-达成社区的共识，但往往有别的办法解决问题。
+本指南里决策和最佳实践都是观点鲜明的。我们将突出某些最佳实践, 并忽略其他有效方法。我们的目标是围绕重大决策达成社区共识, 但在开发应用程序时总会有其他方法来解决问题。
 
-我们相信，坚持"标准"办法要优先于别的解决问题的办法。如果有别的解决办法比较优秀，那么在将来的版本要把它写进指南中。
+我们认为重要的是要知道解决问题的 "标准" 方法，而不是为解决问题而寻求其他途径。如果有的解决办法确实很优秀，那么我们在将来的版本要把它写进指南中。
 
-指南的一个重要的功能是指导meteor平台将来的开发方向。通过编写最佳实践，指南可以为将来的平台开发指明方向：如何变得更好，
-变得更容易，变得更高效。
+该指南的一个重要功能是指导meteor平台未来的发展方向。通过编写最佳实践，指南可以为将来的平台开发指明方向：如何变得更好、变得更容易、变得更高效。
 
-同样，本指南里提出的一些平台还没有实现的重点方案，常常会得到社区包的补充。我们鼓励你发现机会，为改进meteor工作流开发
-社区包。如果你不确定如何更好地设计包的架构，请去社区论坛进行讨论。
+同样，本指南里强调的一些平台还没有实现的重要方案，可以通过开发社区包的实现。我们鼓励你发现机会，为改进meteor工作流开发社区包。
+如果你不确定如何更好地设计包的架构，请去社区论坛展开讨论。
 
 #   代码风格（Code Style）
 
@@ -128,18 +126,18 @@ Meteor平台的API文档可以从[文档中心](https://docs.meteor.com/)获得�
 
 ##  坚持一贯风格的益处
 
-多年来开发者关于使用单引号还是双引号、在哪儿使用园括号、留几个空格、以及所有关于美化代码风格的进行了大量的讨论。这些都
-是与代码质量有很好的关联的问题，但是，由于他们表面上相象而容易混淆。
+多年来, 开发人员花了无数时间讨论单引号、双引号、括号、空格数以及其他各种外观代码样式问题。这些都
+是与代码质量有关联的问题，但是，很容易因为他们外观可见而产生分歧。
 
-尽管你的代码对字符串使单引号还是双引号并不一定重要，但在你的整个代码组织中进行一次决策并保持一贯是有很大好处的。这些益处
+尽管你的代码对字符串使单引号还是双引号并不一定重要，但在你的整个代码组织中进行一次决策并保持一致风格是有很大好处的。这些益处
 同样适用于使meteor和整个JavaScript社区的开发工作保持一致。
 
 ###  容易阅读代码
 
-就象阅读英文句子时并不是一个字一个字地读一样，在阅读代码的时候，并不是一个符号一个符号地阅读。通常情况，你只是看了表达式
-的形状，或者重点，就断定代码是做什么的。如果所有代码都保持一贯风格，就能确保看起来相象的代码*确实是*相同的代码--没有隐藏
-的标点符号或者陷阱，这样你就可以专注于理解逻辑而不是理解符号。一个实例就是缩进，在JavaScript代码中，缩进并没有意义，但
-保持代码缩进的一贯性，在阅读代码码时，并不需要阅读每一个括号细节以理解代码的作用。
+就象阅读英文句子时并不是一个字一个字地阅读，在阅读代码的时候，并不是一个符号一个符号地阅读。通常，你只是看了表达式
+的形状，或者重点，就断定代码是做什么的。如果所有代码都保持一贯风格，就能确保看起来相象的代码 **确实是** 相同的代码——没有隐藏
+的标点符号或者陷阱，这样你就可以专注于理解逻辑而不是理解符号。一个例子就是缩进，在JavaScript代码中，缩进并没有意义，但
+保持代码缩进的一贯性，在阅读代码时，并不需要阅读每一个括号细节以理解代码的用途。
 
 ``` 
 // This code is misleading because it looks like both statements
@@ -159,20 +157,20 @@ secondStatement();
 
 ###  自动检查错误
 
-保持一贯的代码的风格意味着容易使用标准的工具来检查错误。比如你采用一种约定，使用```let```和```const```代替```var```
+保持一贯的代码风格意味着容易使用标准的工具来检查错误。比如你采用一种约定，使用```let```和```const```代替```var```
 申明变量，你就能用一种工具确保变量被正确申明。这意味着可以避免变量产生意外行为。同样，强制所有的变量在使用之前申明，就能
 很容易地在代码运行前发现拼写错误。
 
 ### 深入理解
 
 在学习一门程序语言的时候，很难一次性掌握所有的东西。例如，程序员刚接触JavaScript时，常常为```var```关键字和方法范围
-(function scope)。使用社区推荐的代码风格配合自动语法分析就能提前警示这些陷阱。这意味着你可以马上开始写代码，而不需要
+(function scope)困惑。使用社区推荐的代码风格配合自动语法分析就能提前警示这些陷阱。这意味着你可以马上开始写代码，而不需要
 把JavaScript的方方面面都学习之后再写代码。
 
 ##  JavaScrip风格指南
 
-在meteor里，我们坚定地认为JavaScript是构建web应用程序的最好的语言，是有很多原因的。JavaScript在不断地改进，JavaScript
-ES2015标准把社区真正带领到了一起。下面的代码显示了ES2015标准关于JavaScript的编码建议。
+在meteor的世界里，我们坚信JavaScript是构建web应用程序的最好的语言，这是有很多原因的。JavaScript在不断地改进，JavaScript
+ES2015标准把社区真正引领到了一起。下面的代码显示了ES2015标准关于JavaScript的编码建议。
 
 ![](/images/ben-es2015-demo.gif)
 
@@ -180,19 +178,19 @@ ES2015标准把社区真正带领到了一起。下面的代码显示了ES2015�
 
 ### 使用ecmascript包
 
-ECMAScript, 每个浏览器的JavaScript实现所基于的语言标准, 每年都有新的标准发布。最新的完整标准是ES2015, 
-其中包括一些期待已久的和非常重要的对JavaScript语言改进。Meteor的ECMAScript包使用流行的Babel编译器将ES2015标准语言
-编译成常规的JavaScript语言，使得所有的流浏览器都能理解执行。它是完全向后兼容到"常规"JavaScript的，所以如果你不乐意，
-你就没必要使用新的特性。我们努力一些高级的浏览器特性比如代码地图(source maps)跟Meteor包很好地工作，因此你可以使用你
-最喜欢的开发工具，不需要查看编译输出。
+ECMAScript, 是每个浏览器的JavaScript实现所基于的语言标准, 每年都有新的标准发布。最新的完整标准是ES2015, 
+其中包括一些期待已久的和非常重要的对JavaScript语言的改进。Meteor的ECMAScript包使用流行的Babel编译器将ES2015标准语言
+编译成常规的JavaScript语言，使得所有的浏览器都能理解执行。它是完全向后兼容到"常规"JavaScript的，所以如果你不乐意，
+你就没必要使用新的特性。我们努力使一些高级的浏览器特性比如代码地图(source maps)跟Meteor包很好地协作，因此你可以使用你
+最喜欢的开发工具，不需要查看编译结果。
 
 默认情况下, ecmascript包包含在所有新应用程序和包中, 并自动编译带有.js文件扩展名的所有文件。
 [查看ecmascript软件包支持的所有ES2015功能的列表](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features)。
 
 要获得完整的经验, 你也应该使用es5-shim包, 默认情况下这是包括在所有新的应用程序中。这意味着您可以依赖于运行时功能(如Array#forEach), 
-而无需担心哪些浏览器支持它们。
+而无需关心哪些浏览器支持它们。
 
-本指南中的所有代码示例和未来的Meteor教程将使用所有新的ES2015功能。你也可以阅读更多关于ES2015和如何开始使用它，流星博客:
+本指南中的所有代码示例和未来的Meteor教程将使用所有新的ES2015功能。你也可以阅读更多关于ES2015和如何开始使用它的Meteor博客:
 
 -   [Getting started with ES2015 and Meteor](http://info.meteor.com/blog/es2015-get-started)
 -   [Set up Sublime Text for ES2015](http://info.meteor.com/blog/set-up-sublime-text-for-meteor-es6-es2015-and-jsx-syntax-and-linting)
@@ -200,15 +198,15 @@ ECMAScript, 每个浏览器的JavaScript实现所基于的语言标准, 每年�
 
 ### 遵循JavaScript样式指南
 
-我们建议选择和坚持一个JavaScript风格的指南, 并使用工具来确保执行它。我们推荐的一个流行的选项是带有ES6扩展功能的Airbnb样式指南 
+我们建议选择和坚持一种JavaScript风格的指南, 并使用工具来确保南彻它。我们推荐的一个主流选择是带有ES6扩展功能的Airbnb样式指南 
 (带有React扩展选项)。
 
 ##  使用ESLint检查代码
 
-"代码语法分析"是自动检查代码中常见错误或样式问题的过程。例如, ESLint可以确定您是否在变量名中有输入错误, 或者由于条件
+"代码语法分析(linting)"是自动检查代码中常见错误或样式问题的过程。例如, ESLint可以发现您是否在变量名中有输入错误, 或者由于条件
 写得不好而无法访问代码的某些部分。
 
-我们建议使用Airbnb eslint配置来验证[Airbnb样式指南](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)。
+我们建议使用Airbnb eslint配置来验证工具。[Airbnb样式指南](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)。
 
 下面, 您可以在许多不同的开发阶段找到设置自动语法分析的方法。通常, 您希望尽可能频繁地运行语法分析器,因为它是识别错误和小错误的最快和最简单的方法。
 
@@ -239,7 +237,7 @@ meteor npm install --save-dev babel-eslint eslint-config-airbnb eslint-plugin-im
 }
 ```
 
-为了运行linter,只需输入命令：
+要运行linter,只需输入命令：
 
 ``` 
 meteor npm run lint
@@ -262,9 +260,9 @@ meteor npm run lint
 -   SublimeLinter ([完整说明](http://sublimelinter.readthedocs.org/en/latest/installation.html))
 -   SublimeLinter-contrib-eslint ([完整说明](https://github.com/roadhump/SublimeLinter-eslint#plugin-installation))
 
-若要获得正确的语法高亮显示, 请转到.js文件, 然后通过*View*下拉菜单选择以下内容: 
-*Syntax -> Open all with current extension as… -> Babel -> JavaScript (Babel)*。如果您使用的是jsx文件,
-请从.jsx文件执行相同的操作。如果它工作,当你打开这些文件时，你会看到 "JavaScript (Babel)" 在右下角的窗口。
+若要获得正确的语法高亮显示, 请转到.js文件, 然后通过 ```View``` 下拉菜单选择以下内容: 
+ ```Syntax -> Open all with current extension as… -> Babel -> JavaScript (Babel)``` 。如果您使用的是jsx文件,
+请从.jsx文件执行相同的操作。如果它工作,当你打开这些文件时，你会在窗口右下角看到 ```JavaScript (Babel)```。
 有关兼容配色方案的信息, 请参阅[软件包自述文件](https://github.com/babel/babel-sublime)。
  
 

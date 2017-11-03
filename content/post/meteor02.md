@@ -1,5 +1,5 @@
 +++
-title = "Meteor:开发Web应用和移动应用的利器（2）"
+title = "Meteor(2):应用程序组织结构"
 description = "title:应用程序组织结构"
 tags = [
     "JavaScript",

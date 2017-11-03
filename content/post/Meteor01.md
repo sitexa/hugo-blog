@@ -1,5 +1,5 @@
 +++
-title = "Meteor:开发Web应用和移动应用的利器（1）"
+title = "Meteor(1):开发Web应用和移动应用的利器"
 description = "介绍"
 tags = [
     "JavaScript",
@@ -17,7 +17,7 @@ thumbnail = "images/meteor_logo.png"
 +++
 
 
-本文是一份Meteor的使用指南，Meteor是开发现代Web应用和移动应用的JavaScript全栈式开发平台。本文基于官网的介绍改编，目的是
+本文是关于Meteor的使用指南，Meteor是开发现代Web应用和移动应用的JavaScript全栈式开发平台。本文基于官网的介绍改编，目的是
 为了学习和理解，对学习和实践的过程进行记录，供有兴趣的同学参考。
 
 <!--more-->

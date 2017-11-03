@@ -1,6 +1,6 @@
 +++
-title = "Meteor(3):数据集(Collections)和架构(Schemas)"
-description = "title:数据集(Collections)和架构(Schemas)"
+title = "Meteor(3):集合(Collections)和架构(Schemas)"
+description = "title:集合(Collections)和架构(Schemas)"
 tags = [
     "JavaScript",
     "NodeJs",
@@ -23,35 +23,35 @@ thumbnail = "images/mongo-db.png"
 
 通过本章的学习，你会了解：
 
-1.  Meteor中不同类型的 MongoDB 数据集(Collection), 以及如何使用它们。
-2.  如何定义数据集(Collection)的架构(Schema)以控制其内容。
-3.  定义数据集(Collection)的架构(Schemas)时应考虑的事项。
-4.  如何在写入数据集(Collection)时确保其架构(Schema)正确。
-5.  如何更改数据集(Collection)的架构(Schema)。
+1.  Meteor中不同类型的 MongoDB 集合(Collection), 以及如何使用它们。
+2.  如何定义集合(Collection)的架构(Schema)以控制其内容。
+3.  定义集合(Collection)的架构(Schemas)时应考虑的事项。
+4.  如何在写入集合(Collection)时确保其架构(Schema)正确。
+5.  如何更改集合(Collection)的架构(Schema)。
 6.  如何处理记录(Record)之间的关联(Association)。
 
-##  Meteor中的MongoDB数据集(Collection)
+##  Meteor中的MongoDB集合(Collection)
 
 web应用程序为用户提供了观察数据的视图, 一种修改数据的方法。无论是管理Todos的任务列表, 还是提交一个滴滴订单, 
 您都在与一个持久但不断变化的数据层进行交互。
 
-在Meteor中, 该数据层通常存储在 MongoDB 中。MongoDB 中的一组相关数据称为 "数据集(Collection)"。
-在Meteor中, 您可以通过[collections](http://docs.meteor.com/api/collections.html#Mongo-Collection)访问 MongoDB。MongoDB数据集是应用程序数据的主要存储机制。
+在Meteor中, 该数据层通常存储在 MongoDB 中。MongoDB 中的一组相关数据称为 "集合(Collection)"。
+在Meteor中, 您可以通过[collections](http://docs.meteor.com/api/collections.html#Mongo-Collection)访问 MongoDB。MongoDB集合是应用程序数据的主要存储机制。
 
-但是, 数据集不仅仅是保存和检索数据的一种方法。它们还提供了用户希望从最佳实践中获得的交互式、用户体验的核心功能。
+但是, 集合不仅仅是保存和检索数据的一种方法。它们还提供了用户希望从最佳实践中获得的交互式、用户体验的核心功能。
 Meteor使这种用户体验易于实现。
 
-在本文中, 我们将仔细研究数据集在不同场景下的工作方式, 以及如何从中获得帮助。
+在本文中, 我们将仔细研究集合在不同场景下的工作方式, 以及如何从中获得帮助。
 
-### 服务端数据集(Server-side Collections)
+### 服务端集合(Server-side Collections)
 
-当你在服务器端创建一个数据集：
+当你在服务器端创建一个集合：
 
 ``` 
 Todos = new Mongo.Collection('todos');
 ```
 
-你就创建了一个MongoDB数据集，和一个使用数据集的接口。这是一个相当简单的层，它基于MongoDB的node.js driver,是一个同步的API:
+你就创建了一个MongoDB集合，和一个使用集合的接口。这是一个相当简单的层，它基于MongoDB的node.js driver,是一个同步的API:
 
 ``` 
 // This line won't complete until the insert is done
@@ -62,7 +62,7 @@ const todo = Todos.findOne({_id: 'my-todo'});
 console.log(todo);
 ```
 
-### 客户端数据集(Client-side Collections)
+### 客户端集合(Client-side Collections)
 
 在客户端，你写相同一行程序：
 
@@ -73,7 +73,7 @@ Todos = new Mongo.Collection('todos');
 做的是完全不同的事情！
 
 在客户端上, 没有与 MongoDB 数据库的直接连接, 事实上, 对数据库的同步 API 是不可能的 (也可能不是您想要的)。
-相反, 在客户端, 数据集是数据库的客户端缓存(cache)。这是通过 [Minimongo](https://github.com/meteor/meteor/blob/master/packages/minimongo/README.md) 库实现的。Minimongo 库是一种全JS实现的、
+相反, 在客户端, 集合是数据库的客户端缓存(cache)。这是通过 [Minimongo](https://github.com/meteor/meteor/blob/master/packages/minimongo/README.md) 库实现的。Minimongo 库是一种全JS实现的、
 运行于内存中的MongoDB API实现。
 
 这意味着在客户端上, 当您编写下面的代码时:
@@ -87,37 +87,37 @@ const todo = Todos.findOne({_id: 'my-todo'});
 console.log(todo);
 ```
 
-将数据从服务器(MongoDB支撑)集合移动到客户端(内存中支撑)集合的方式是[数据加载文章](https://guide.meteor.com/data-loading.html)的主题。
+将数据从服务器(MongoDB支撑)集合移动到客户端(内存中支撑)集合的方法是[数据加载文章](https://guide.meteor.com/data-loading.html)的主题。
 一般来说, 您订阅(subscribe)的是一个发布(publication), 它将数据从服务器推送到客户端。
-通常, 您可以假定客户端包含完整 MongoDB 数据集的某些子集的最新副本。
+通常, 您可以假定客户端包含完整 MongoDB 集合的某些子集的最新副本。
 
 若要将数据写回服务器, 请使用方法(Method) ([方法主题文章](https://guide.meteor.com/methods.html))。
 
-### 本地数据集(Local Collections)
+### 本地集合(Local Collections)
 
-有第三种方法可以在Meteor中使用数据集。在客户端或服务器上, 如果用以下两种方式之一创建数据集:
+有第三种方法可以在Meteor中使用集合。在客户端或服务器上, 如果用以下两种方式之一创建集合:
 
 ``` 
 SelectedTodos = new Mongo.Collection(null);
 SelectedTodos = new Mongo.Collection('selectedtodos', {connection: null});
 ```
 
-这将创建一个本地数据集。这是一个没有数据库连接的 Minimongo 数据集 (通常, 数据集要么直接连接到服务器上的数据库, 要么通过客户端上的订阅来访问服务器数据库)。
+这将创建一个本地集合。这是一个没有数据库连接的 Minimongo 集合 (通常, 集合要么直接连接到服务器上的数据库, 要么通过客户端上的订阅来访问服务器数据库)。
 
-本地数据集是使用 Minimongo 库的强大能力进行内存存储的一种简便方法。例如, 如果需要对数据执行复杂查询, 则可以使用它而不是简单的数组。
-或者你可能想利用本地数据集在客户端的**反应式能力(reactivity)**, 以一种在Meteor中感觉很自然的方式来驱动UI。
+本地集合是使用 Minimongo 库的强大能力进行内存存储的一种简便方法。例如, 如果需要对数据执行复杂查询, 则可以使用它而不是简单的数组。
+或者你可能想利用本地集合在客户端的**反应式能力(reactivity)**, 以一种在Meteor中感觉很自然的方式来驱动UI。
 
 ##  定义架构(Schema)
 
-虽然 MongoDB 是一个无模式(schema-less)的数据库, 它允许在数据结构中实现最大的灵活性, 但通常良好的做法是使用架构来约束集合的内容, 使其符合已知的格式。
-如果不这样做, 那么您往往需要编写验证代码来检查和确认数据的结构, 因为数据集是从数据库中出来, 而不是进入数据库。
-在大多数情况下, 读数据比写数据的情况更多，因此在编写时使用模式通常更简单，错误更少。
+虽然 MongoDB 是一个无架构(schema-less)的数据库, 它允许在数据结构中实现最大的灵活性, 但通常良好的做法是使用架构来约束集合的内容, 使其符合已知的格式。
+如果不这样做, 那么您往往需要编写验证代码来检查和确认数据的结构, 因为集合是从数据库中出来, 而不是进入数据库。
+在大多数情况下, 读数据比写数据的情况更多，因此在写数据时使用架构通常更容易，错误更少。
 
 在Meteor中, [aldeed:simple-schema](https://atmospherejs.com/aldeed/simple-schema)是很优秀的架构包。
 它是一种表达能力强大、基于 MongoDB 的架构, 用于插入和更新文档。另一种选择是[jagi:astronomy](https://atmospherejs.com/jagi/astronomy), 
 它是一个完整的对象模型 (OM) 层, 提供架构定义、服务器/客户端验证器、对象方法和事件处理程序。
 
-假设我们有一个```Lists```数据集。若要使用```simple-schema```为该数据集定义架构, 可以简单地创建 SimpleSchema 类的实例并将其附加到```Lists```对象中:
+假设我们有一个```Lists```集合。若要使用```simple-schema```为该集合定义架构, 可以简单地创建 SimpleSchema 类的实例并将其附加到```Lists```对象中:
 
 ``` 
 Lists.schema = new SimpleSchema({
@@ -129,18 +129,19 @@ Lists.schema = new SimpleSchema({
 
 Todos应用程序的这个例子定义了一个架构, 其中有几个简单的规则:
 
-1.  我们指定列表的 name 字段是必需的, 并且必须是字符串。
-2.  我们指定 incompleteCount 是一个数字, 如果没有另外指定, 则在插入时将其设置为0。
-3.  我们指定用户 id 是可选的, 它必须是一个字符串, 它看起来就像一个使用者文档的标识。
+1.  我们指定列表的 name 字段是必需的, 并且必须是字符串(String)。
+2.  我们指定 incompleteCount 是一个数字类型(Number), 如果没有另外指定, 则在插入时将其设置为0。
+3.  我们指定userId是可选的, 它必须是一个字符串(String), 它看起来就像一个用户文档的标识(ID)。
 
-我们直接将架构附加到```Lists```的命名空间, 这方便我们可以在需要时直接检查对象, 例如在窗体或方法([Method](https://guide.meteor.com/methods.html))中。
-在下一节中, 我们将了解如何在写入集合时自动使用此架构。
+我们直接将架构附加到```Lists```的命名空间, 以便我们在需要时直接检查对象是否符合架构构束, 例如在窗体或方法([Method](https://guide.meteor.com/methods.html))中。
+在下一节中, 我们将了解如何在写入集合时自动使用此架构约束。
 
-您可以看到, 使用很少的代码, 我们已经成功地限制了列表的格式。您可以阅读有关简单模式文档([Simple Schema docs](http://atmospherejs.com/aldeed/simple-schema))中的架构所能完成的更复杂的事情。
+您可以看到, 使用很少的代码, 我们已经成功地限制了列表的格式。
+您可以阅读有关([简单架构文档](http://atmospherejs.com/aldeed/simple-schema))中的架构所能完成的更复杂的事情。
 
 ### 针对架构进行验证
 
-现在我们有了一个模式, 我们如何使用它？
+现在我们有了一个架构, 我们如何使用它呢？
 
 使用架构来验证文档非常简单。我们可以写:
 
@@ -152,7 +153,7 @@ const list = {
 Lists.schema.validate(list);
 ```
 
-在这种情况下, 由于该列表根据架构是有效的, 因此```validate()```行运行时不会出现问题。然而, 我们写到:
+在这种情况下, 由于该```list```对架构是有效的, 因此```validate()```行运行时不会出现错误。然而, 当我们写成:
 
 ``` 
 const list = {
@@ -163,22 +164,22 @@ const list = {
 Lists.schema.validate(list);
 ```
 
-这时, ```validate()```调用将抛出一个 ```ValidationError```, 其中包含有关```list```文档的错误的详细信息。
+这时, ```validate()```调用将抛出一个 ```ValidationError```, 其中包含了有关```list```文档的错误的详细信息。
 
 ### ValidationError
 
-什么是 ```ValidationError```？这是一个Meteor使用的特殊的错误, 以指示用户在修改集合时有输入错误。
+什么是 ```ValidationError```？这是一个Meteor使用的特殊的错误, 告诉用户在修改集合时有输入错误。
 通常, ```ValidationError``` 上的详细信息用于标记表单, 其中有有关输入与架构不匹配的内容。
 在方法([Methods](https://guide.meteor.com/methods.html#validation-error))文章中, 我们将看到更多有关如何工作的信息。
 
 
 ##  定义数据架构
 
-现在您已经熟悉了```Simple Schema```的基本 API, 因此值得考虑一些可能影响数据架构设计的Meteor数据系统的约束。
-虽然一般来说, 你可以像建立任何 MongoDB 的数据模式一样建立一个Meteor数据模式, 但仍然有一些重要的细节要牢记在心。
+现在您已经熟悉了```Simple Schema```的基本API, 现在有必要考虑一些可能影响数据架构设计的Meteor数据系统的约束。
+虽然一般来说, 你可以像建立任何 MongoDB 的数据架构(schema)一样建立一个Meteor数据架构(schema), 但仍然有一些重要的细节需要牢记在心。
 
-最重要的考虑是有关Meteor的数据加载协议：DDP，在线文档通讯协议。该协议实现的关键是, DDP 在顶极文档字段级别发送对文档的更改。
-这意味着, 如果你有大的和复杂的字段(fields)在文件上经常变化, DDP将发送不必要的变更信息。
+首先要考虑的是有关Meteor的数据加载协议：DDP——在线文档通讯协议。该协议实现的关键是, DDP在文档顶级字段发起对文档的更改。
+这意味着, 如果你的文档有大的和复杂的字段(fields)经常变化, DDP将发起不必要的更改。
 
 例如, 在 "纯" MongoDB 中, 您可以设计如下架构, 以便每个列表文档都有一个称为```Todos```的字段, 它是一个 ```todo``` 项目的数组:
 
@@ -189,41 +190,41 @@ Lists.schema = new SimpleSchema({
 });
 ```
 
-此模式的问题是, 由于刚才提到的 DDP 行为, 每个对列表中的 todo 项的更改都需要通过网络发送该列表的整个Todos集合。
-这是因为 DDP 没有 "更改字段中的第三项叫Todos的文本字段", 而是 "将Todos字段改变成一个全新的数组"。
+此架构的缺陷是, 根据刚才提到的DDP行为方法, 每个对列表中的todo项的更改都需要通过网络发送该列表的整个Todos集合。
+这是因为DDP没有办法做到"更改字段中第三项叫Todos的文本字段", 而是"将Todos字段改变成一个全新的数组"。
 
-###  规范化和多个集合
+###  反规范化和多个集合
 
-上面的含义是, 我们需要创建更多的**数据集**来包含子文档(sub-documents)。在Todos应用程序中, 
-我们需要一个```Lists```数据集和一个```Todos```数据集来包含每个列表的 todo 项。因此, 我们需要做一些通常与 SQL 数据库关联的事情, 
+上面的含义是, 我们需要创建更多的**集合**来包含子文档(sub-documents)。在Todos应用程序中, 
+我们需要一个```Lists```集合和一个```Todos```集合来包含每个列表的 todo 项。因此, 我们需要做一些通常与 SQL 数据库关的事情, 
 比如使用外键 (todo. listId) 将一个文档与另一个文件相关联。
 
-在Meteor里，与一个典型的 MongoDB 应用程序不一样，这往往出问题, 因为它很容易发布重叠的文件集 (我们可能需要一组用户来渲染一个屏幕, 而跟别的功能发生交叉影响), 
-当我们在应用程序中移动时, 这组用户数据可能留在客户端上。因此, 在这种情况下, 将子文档与父文档分开是有好处的。
+在Meteor里，与典型的 MongoDB 应用程序不一样，这样做往往出问题, 因为它很容易发布重叠的文件集合(我们可能需要一组用户来渲染一个屏幕, 而跟别的功能发生交叉影响), 
+当我们在应用程序中移动时, 这组用户数据可能留在客户端上。在这种情况下, 需要将子文档与父文档分开。
 
-但是, 考虑到版本3.2 之前的 MongoDB 不支持对多个集合 ("join") 的查询, 因此我们通常不得不将一些数据重新规范化到父集合。
-规范化是在数据库中多次存储同一信息的做法 (相对于非冗余 "正常" 形式)。MongoDB 提倡规范化的数据库, 并且优化了这种做法。
+但是, 考虑到版本3.2之前的 MongoDB 不支持对多个集合的"join"的查询, 因此我们不得不将一些数据重新反规范化到父集合。
+反规范化是在数据库中多次存储同一信息的做法(冗余形式，相对于"正常"非冗余形式)。MongoDB提倡反规范化的数据库,并且优化了这种做法。
 
-在Todos应用程序里, 我们要显示每个列表旁边未完成的任务(todos)的数量, 我们需要规范化```list.incompleteTodoCount```。
-这是一个不便理解但通常相当容易做到的事情, 我们将在下面一节中看到[如何规范化](https://guide.meteor.com/collections.html#abstracting-denormalizers)。
+在Todos应用程序里, 我们要在每个列表旁边显示未完成的任务(todos)的数量, 我们需要反规范化```list.incompleteTodoCount```。
+这是一个不容易理解但通常相当容易做到的事情, 我们将在下面一节中看到[如何反规范化](https://guide.meteor.com/collections.html#abstracting-denormalizers)。
 
-这种体系结构需要的另一个规范化需求是从父文档到子文档的。例如, 在Todos中, 我们通过```list.userId```属性来确保任务列表(todo lists)的私密性, 
-但我们分别发布Todos, 又可能要对```list.userId```进行规范化。要做到这一点, 在创建 todo 时, 我们需要谨慎地从列表中取得userId, 并在列表的userId更改时更新所有相关Todos。
+这种体系结构需要的另一个反规范化需求是从父文档到子文档的。例如, 在Todos中, 我们通过```list.userId```属性来确保任务列表(todo lists)的私密性, 
+但我们分别发布Todos, 又可能要对```list.userId```进行反规范化。要做到这一点, 在创建 todo 时, 我们需要谨慎地从列表中取得userId, 并在列表的userId更改时更新所有相关Todos。
 
 ### 为未来设计
 
 应用程序 (尤其是 web 应用程序) 很少有完成后不再修改的时候, 所以在设计数据架构时要考虑将来可能发生的更改。
-在大多数情况下, 在有实际需要之前添加字段并不是一个好主意 (通常你所预期的需求实际上并不会最终发生)。
+在大多数情况下, 在有实际需要之前添加字段并不是一个好策略(通常你所预期的需求实际上并不会最终发生)。
 
-但是, 最好提前考虑到着时间的推移数据架构(schema)可能会发生改变。例如, 您可能有一个文档中的字符串列表 (可能是一组标记)。
-尽管将它们作为一个子字段放在文档中似乎挺好(假设它们不会有太大的变化), 但也有可能，他们最终会变得更加复杂 
-(也许标签会有一个创建者, 或者有一个子标签呢？), 那么从长远考虑，一开始就做一个单独的数据集可能更容易。
+但是, 最好提前考虑到随着时间的推移数据架构(schema)可能会发生改变。例如, 将来可能要在文档中加一个字符串列表 (可能是一组标记)。
+尽管将它们作为一个子字段放在文档中似乎挺好(假设它们不会有太大的变化), 但也有可能，他们最终会变得更加复杂
+(也许标签会有一个创建者, 或者有一个子标签呢？), 那么从长远考虑，一开始就做一个单独的集合可能更合理。
 
-你在模式设计中的远见将取决于你的应用程序的独特需求, 并且需要你来作出判断。
+你在架构设计中的远见将取决于你的应用程序的独特需求, 并且需要你来作出判断。
 
 ### 在写数据库时使用架构
 
-虽然有多种方法可以在将数据发送到数据集之前通过**简单模式**(Simple Schema)来检验它 (例如, 您可以在每个方法调用中检查数据架构), 
+虽然有多种方法可以在将数据发送到集合之前通过**简单架构**(Simple Schema)来检验它 (例如, 您可以在每个方法调用中检查数据架构), 
 但最简单、最可靠的方法是使用 [aldeed:collection2](https://atmospherejs.com/aldeed/collection2) 包来检查每一次更改(insert/update/upsert)调用。
 
 我们通过```attachSchema()```来实现：
@@ -242,7 +243,7 @@ Collection2 做的一件事是 ["清理"数据](https://github.com/aldeed/meteor
 2.  删除架构中不具有的属性
 3.  根据架构定义中的defaultValue分配默认值
 
-但是, 有时在将文档插入到数据集之前, 需要对其进行复杂的初始化。例如, 在Todos应用程序中, 我们希望将新列表的名称设置为 "List x", 其中 x 是下一个可用的唯一字母。
+但是, 有时在将文档插入到集合之前, 需要对其进行复杂的初始化。例如, 在Todos应用程序中, 我们希望将新列表的名称设置为 "List x", 其中 x 是下一个可用的唯一字母。
 
 我们通过继承```Mongo.Collection```并重写```insert()```来实现：
 
@@ -358,8 +359,8 @@ class TodosCollection extends Mongo.Collection {
 
 ##  向新架构迁移
 
-正如我们前面所讨论的, 试图提前预测数据模式的所有未来需求是不可能的。随着项目的成熟, 不可避免地会出现需要更改数据库架构的时候。
-您需要注意如何迁移到新的模式, 并确保您的应用程序在迁移期间和之后能顺利运行。
+正如我们前面所讨论的, 试图提前预测数据架构的所有未来需求是不可能的。随着项目的成熟, 不可避免地会出现需要更改数据库架构的时候。
+您需要注意如何迁移到新的架构, 并确保您的应用程序在迁移期间和之后能顺利运行。
 
 ### 编写迁移程序
 
@@ -451,7 +452,7 @@ Migrations.migrateTo('latest');
 
 ### 中断架构更改
 
-有时, 当我们更改应用程序的模式时, 我们会以中断的方式进行, 这样旧的模式就不能正常使用新的代码库。例如, 如果我们有一些用户界面代码, 
+有时, 当我们更改应用程序的架构时, 我们会以中断的方式进行, 这样旧的架构就不能正常使用新的代码库。例如, 如果我们有一些用户界面代码, 
 大量依赖于所有具有 todoCount 集的列表, 那么在迁移运行之前, 我们的应用程序的 ui 将在部署后中断。
 
 解决此问题的简单方法是在部署和完成迁移之间的一段时间内暂停应用程序。这很不合适, 特别是考虑到一些迁移可能需要数小时才能运行 
@@ -459,9 +460,9 @@ Migrations.migrateTo('latest');
 
 更好的方法是多级部署。其基本思想是:
 
-1.  部署可以处理旧模式和新架构的应用程序版本。在我们的例子中, 不期望 todoCount 存在, 但是在创建新的Todos时正确地更新了它。
+1.  部署可以处理旧架构和新架构的应用程序版本。在我们的例子中, 不期望 todoCount 存在, 但是在创建新的Todos时正确地更新了它。
 2.  运行迁移。此时, 您应该确保所有列表都有一个 todoCount。
-3.  部署依赖新架构的新代码, 不再知道如何处理旧模式。现在UI中我们可以放心地依赖```list.todoCount``` 。
+3.  部署依赖新架构的新代码, 不再知道如何处理旧架构。现在UI中我们可以放心地依赖```list.todoCount``` 。
 
 还有一件事需要注意, 特别是在这种多阶段部署中, 准备回滚是很重要的! 因此, 迁移包允许您指定一个```down()```函数，
 并调用```Migrations.migrateTo (x)``` 迁移回版本 x。
@@ -498,7 +499,7 @@ Migrations.migrateTo(0);
 我们可以使用这些方法创建新的查询来查找相关文档。
 
 
-### Collection helpers（数据集Helpers）
+### Collection helpers（集合Helpers）
 
 
 我们可以使用 [dburles:collection-helpers](https://atmospherejs.com/dburles/collection-helpers) 程序包来轻松地将这些方法 (或 "Helpers"") 附加到文档中。例如:

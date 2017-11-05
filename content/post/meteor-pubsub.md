@@ -273,6 +273,302 @@ Template.Lists_show_page.onCreated(function() {
 
 ### 订阅分页
 
+一个非常常见的数据访问模式是分页。这是指一次获取一个 "页面" 的有序数据列表的做法, 通常是一个特定数量, 比如每页二十条。
 
+通常使用两种类型的分页, 一种是"一页接一页" 样式, 其中一次只显示一页结果, 从某一偏移量开始 (用户可以控制)；另一种是 "无限滚动" 样式, 
+当用户在列表中移动时，显示越来越多的项目页,  (这是典型的 "feed" 样式的用户界面)。
 
+在本节中, 我们将讨论第二个无限滚动分页样式的发布/订阅技术。"一页接一页"技术在Meteor中有一些困难, 因为在客户端难以计算偏移量。
+如果需要这样做, 您可以遵循我们在这里使用的许多相同的技术, 并使用[过滤:从发布查找](https://atmospherejs.com/percolate/find-from-publication)包, 
+以跟踪哪些记录来自您的发布。
+
+在无限的滚动发布中, 我们只需要向发布添加一个新参数, 以控制要加载的项目数。假设我们想在我们的Todos示例应用程序中分页todo项目:
+
+``` 
+const MAX_TODOS = 1000;
+Meteor.publish('todos.inList', function(listId, limit) {
+  new SimpleSchema({
+    listId: { type: String },
+    limit: { type: Number }
+  }).validate({ listId, limit });
+  const options = {
+    sort: {createdAt: -1},
+    limit: Math.min(limit, MAX_TODOS)
+  };
+  // ...
+});
+```
+
+重要的是, 我们在查询中设置一个```sort```参数 (以确保在请求更多页时可重复列出列表项的顺序), 并在用户可以请求的项目数上设置最大值 
+(至少在列表可以不受约束地增长的情况下)。
+
+然后在客户端, 我们设置了某种类型的反应式状态变量(reactive state variable)来控制要请求的项数:
+
+``` 
+Template.Lists_show_page.onCreated(function() {
+  this.getListId = () => FlowRouter.getParam('_id');
+  this.autorun(() => {
+    this.subscribe('todos.inList',
+      this.getListId(), this.state.get('requestedTodos'));
+  });
+});
+```
+
+当用户单击 "加载更多" (或者可能只是滚动到页面底部时), 我们会增加请求的Todos变量。
+
+数据分页时有一条信息很有用：项目总数。 [tmeasday:publish-counts](https://atmospherejs.com/tmeasday/publish-counts) 包可以用于发布此信息。
+我们可以添加一个```Lists.todoCount```给发布，请看下面的代码：
+
+``` 
+Meteor.publish('Lists.todoCount', function({ listId }) {
+  new SimpleSchema({
+    listId: {type: String}
+  }).validate({ listId });
+  Counts.publish(this, `Lists.todoCount.${listId}`, Todos.find({listId}));
+});
+```
+
+然后在客户端, 订阅该发布后, 我们可以访问计数。
+
+```
+Counts.get(`Lists.todoCount.${listId}`)
+```
+
+##  具有反应式存储的客户端数据
+
+在Meteor中, 持久的或共享的数据会通过发布从在线数据上传输。但是, 有一些类型的数据不需要在用户之间存储或共享。
+例如, 当前用户的 "logged-in-ness" 或他们正在查看的路由。
+
+虽然客户端状态通常最好包含为单个模板的状态 (并在必要时将状态作为参数沿模板层次结构传递下去), 但有时您需要在模板层次的不相关部分之间共享 "全局" 状态.
+
+通常这种状态是存储在一个全局的单例对象中——我们称之为存储。单例是一种数据结构, 逻辑上只存在一个副本。当前用户和路由是这样的单例的典型例子。
+
+### 存储的类型
+
+在Meteor中, 最好使存储成为反应式数据源(reactive data sources), 这样它们就会自然地与生态系统的其余部分紧密联系。你可以使用几个不同的包做存储。
+
+如果存储是单维度的(single dimensional), 您可以使用 ReactiveVar 存储它 (由 [reactive-var](https://atmospherejs.com/meteor/reactive-var) 包提供)。
+ReactiveVar 有两个属性,get()和set():
+
+``` 
+DocumentHidden = new ReactiveVar(document.hidden);
+$(window).on('visibilitychange', (event) => {
+  DocumentHidden.set(document.hidden);
+});
+```
+
+如果存储是多维的(multi-dimensional), 您可以需要使用 ReactiveDict (由 [reactive-dict](https://atmospherejs.com/meteor/reactive-dict) 包提供):
+
+``` 
+const $window = $(window);
+function getDimensions() {
+  return {
+    width: $window.width(),
+    height: $window.height()
+  };
+};
+WindowSize = new ReactiveDict();
+WindowSize.set(getDimensions());
+$window.on('resize', () => {
+  WindowSize.set(getDimensions());
+});
+```
+
+ReactiveDict 的优点是您可以单独访问每个属性 (```WindowSize.get("width")```), 而字典将对字段进行比较, 并逐个跟踪更改 (您的模板的更新次数就会减少)。
+
+如果您需要查询存储，或存储许多相关的项目, 则最好使用本地集合 (请参阅[Collection Article](https://guide.meteor.com/collections.html#local-collections))。
+
+### 访问存储
+
+您应该像访问模板中的其他反应式数据一样访问数据存储, 这意味着集中访问存储, 非常类似于集中订阅和集中获取数据。
+对于Blaze模板, 要么使用帮助类(helper), 或者在 回调函数 onCreated()的```this.autorun```中。
+
+这样你就可以获得存储的整个反应式强大功能。
+
+### 更新存储
+
+如果由于用户操作而需要更新存储, 则可以从事件处理程序中更新存储, 就像调用方法一样。
+
+如果您需要在更新中执行复杂的逻辑 (例如, 不只是调用. set () 等), 那么最好在存储中定义一个触发器(mutator)。由于存储是单例, 因此您可以直接将函数附加到对象:
+
+``` 
+WindowSize.simulateMobile = (device) => {
+  if (device === 'iphone6s') {
+    this.set({width: 750, height: 1334});
+  }
+}
+```
+
+##  高级发布
+
+有时, 从发布函数返回查询的简单机制不能满足您的需要。这时, 您可以使用一些更强大的发布模式。
+
+### 发布关系数据
+
+在给定的页面上, 需要来自多个集合的相关数据是很常见的情况。例如, 在Todos应用程序中, 当我们呈现一个 todo 列表时, 我们需要列表本身, 以及属于该列表的todos集合。
+
+要这样做的一种方法是从出版物函数中返回多个游标:
+
+``` 
+Meteor.publish('todos.inList', function(listId) {
+  new SimpleSchema({
+    listId: {type: String}
+  }).validate({ listId });
+  const list = Lists.findOne(listId);
+  if (list && (!list.userId || list.userId === this.userId)) {
+    return [
+      Lists.find(listId),
+      Todos.find({listId})
+    ];
+  } else {
+    // The list doesn't exist, or the user isn't allowed to see it.
+    // In either case, make it appear like there is no list.
+    return this.ready();
+  }
+});
+```
+但是, 此示例将无法按预期工作。原因是反应式编程在服务器上的工作方式与在客户端上的不一样。在客户端, 一个反应式功能的任何变化, 都会引起整个功能的重新运行, 结果是相当直观的。
+
+在服务器上, 反应式功能仅限于从发布函数返回的游标的行为。您会看到查询的数据的任何更改, 但**它们的查询永远不会更改**。
+
+因此, 在上述情况下, 如果用户订阅了一个列表，后来此列表被其他用户改为私有数据, 尽管 "list.userId" 将更改，不再满足发布的条件, 
+但发布的主体(body)却不会重新运行, 因此对Todos集合的查询 ({lisId}) 不会更改。因此, 第一个用户将继续看到他们不应该看到的项目。
+
+但是, 我们可以编写对集合中的更改进行适当反应的发布。为此, 我们使用[reywood:publish-composite](https://atmospherejs.com/reywood/publish-composite)包。
+
+此程序包的工作方式是首先在一个集合上建立游标, 然后在第二个集合中使用第一个游标的结果显式地(explicitly)设置第二级游标。
+包使用后台的查询观察器来触发订阅更改, 并在源数据更改时重新运行查询。
+
+``` 
+Meteor.publishComposite('todos.inList', function(listId) {
+  new SimpleSchema({
+    listId: {type: String}
+  }).validate({ listId });
+  const userId = this.userId;
+  return {
+    find() {
+      const query = {
+        _id: listId,
+        $or: [{userId: {$exists: false}}, {userId}]
+      };
+      // We only need the _id field in this query, since it's only
+      // used to drive the child queries to get the todos
+      const options = {
+        fields: { _id: 1 }
+      };
+      return Lists.find(query, options);
+    },
+    children: [{
+      find(list) {
+        return Todos.find({ listId: list._id }, { fields: Todos.publicFields });
+      }
+    }]
+  };
+});
+```
+
+在这个例子中, 我们编写了一个复杂的查询, 以确保我们只找到一个我们被允许看到列表, 
+然后, 一旦我们发现每个列表 (可以是一个或零个，取决于存取), 我们就为该列表发布托多斯列表。
+如果列表没有匹配原始查询或者别的查询, 则发布复合体(Publish Composite)将停止并启动从属游标。
+
+### 复杂授权
+
+我们还可以使用 ```publish-composite``` 在发布中执行复杂的授权。例如, 假设我们有一个 ```Todos.admin.inList``` 发布, 
+该发布默认对具有管理标志集的用户进行安全检查，却允许管理员绕过安全检查(security)。
+
+我们可能想写：
+
+``` 
+Meteor.publish('Todos.admin.inList', function({ listId }) {
+  new SimpleSchema({
+    listId: {type: String}
+  }).validate({ listId });
+  const user = Meteor.users.findOne(this.userId);
+  if (user && user.admin) {
+    // We don't need to worry about the list.userId changing this time
+    return [
+      Lists.find(listId),
+      Todos.find({listId})
+    ];
+  } else {
+    return this.ready();
+  }
+});
+```
+
+但是, 由于上面讨论的相同的原因, 如果用户的```admin```状态更改, 发布却不会重新运行。如果这是很可能发生的事情, 并且需要作出反应式的改变, 
+那么我们就需要使发布成为反应式的。我们可以通过同样的技术来做到这一点:
+
+``` 
+Meteor.publishComposite('Todos.admin.inList', function(listId) {
+  new SimpleSchema({
+    listId: {type: String}
+  }).validate({ listId });
+  const userId = this.userId;
+  return {
+    find() {
+      return Meteor.users.find({_id: userId, admin: true}, {fields: {admin: 1}});
+    },
+    children: [{
+      find(user) {
+        // We don't need to worry about the list.userId changing this time
+        return Lists.find(listId);
+      }
+    },
+    {
+      find(user) {
+        return Todos.find({listId});
+      }
+    }]
+  };
+});
+```
+请注意, 我们显式地设置了 'Meteor.user' 查询字段, 即 "publish-composite" 将所有返回的游标发布到客户端, 并在游标更改时运行 "子计算"。
+
+限制结果有双重目的: 它既防止敏感字段被泄露给客户端, 又限制计算到相关字段 (即管理字段)。
+
+### 使用低级别API自定义发布
+
+在我们所有的例子中 (除了使用```Meteor.publishComposite()```), 我们已经从我们的```Meteor.publish()```处理程序中返回了一个游标。
+这样做可以确保Meteor在服务器和客户端之间保持同步的内容的工作。但是, 还有另一个 API 可以用于发布函数, 这更接近于底层分布式数据协议 (DDP) 的工作方式。
+
+DDP 使用三个主要消息来传达发布数据的更改: 添加、更改和删除的消息。因此, 我们同样可以对发布进行同样的操作:
+
+```
+Meteor.publish('custom-publication', function() {
+  // We can add documents one at a time
+  this.added('collection-name', 'id', {field: 'values'});
+  // We can call ready to indicate to the client that the initial document sent has been sent
+  this.ready();
+  // We may respond to some 3rd party event and want to send notifications
+  Meteor.setTimeout(() => {
+    // If we want to modify a document that we've already added
+    this.changed('collection-name', 'id', {field: 'new-value'});
+    // Or if we don't want the client to see it any more
+    this.removed('collection-name', 'id');
+  });
+  // It's very important to clean up things in the subscription's onStop handler
+  this.onStop(() => {
+    // Perhaps kill the connection with the 3rd party server
+  });
+});
+```
+
+从客户的角度来看, 像这样发布的数据看起来没有什么不同--实际上, 由于 DDP 消息是相同的, 客户端无法知道差异。因此, 即使您正在连接和镜像一些深奥的数据源, 在客户端上, 它也会像任何其他的芒果集合一样出现。
+
+需要注意的一点是, 如果您允许用户修改您以这种方式发布的 "pseudo-collection" 中的数据, 您将需要确保通过发布重新发布(re-publish)对它们的修改, 以获得乐观的用户体验。
+
+### 订阅的生命周期
+
+尽管您可以通过直观的理解在Meteor中使用发布和订阅, 但有时在订阅数据时准确了解引擎盖下发生的情况是很有用的。
+
+假设您有以下形式的简单发布:
+
+``` 
+Meteor.publish('Posts.all', function() {
+  return Posts.find({}, {limit: 10});
+});
+```
+
+然后当一个客户调用```Meteor.subscribe('Posts.all')```时， Meteor里面发生以下事情:
 

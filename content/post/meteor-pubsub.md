@@ -572,3 +572,121 @@ Meteor.publish('Posts.all', function() {
 
 然后当一个客户调用```Meteor.subscribe('Posts.all')```时， Meteor里面发生以下事情:
 
+1.  客户端通过 DDP 发送一个带有订阅名称的订阅消息。
+2.  服务器通过运行发布处理函数来启动订阅。
+3.  发布处理程序标识返回值为游标。这为发布游标提供了方便的模式。
+4.  服务器在该游标上设置一个查询观察器, 如果此类观察器已经存在于服务器上 (对于任何用户), 就重用该观察者。
+5.  观察器读取与游标匹配的当前文档集, 并将它们传递回订阅 (通过this.added()回调函数)。
+6.  订阅将添加的文档传递给订阅客户端的连接mergebox, 这是已发布到此特定客户端的文档的服务器缓存。
+每个文档都与客户端知道的文档的任何现有版本合并, 这样该添加了 (如果该文档是新的客户端) 或已更改 (如果已知但此订阅是添加或更改字段),
+的文档就通过DDP消息发送给了订阅客户端。请注意, mergebox 在顶级字段进行操作, 因此, 如果两个订阅发布嵌套的字段 
+(例如, sub1发布```doc.a.b=7```, sub2发布```doc.a.c=8```), 那么 "合并" 文档可能不像您所期望的那样 (在本例中，如果sub2在sub1之后发生,则结果为```doc.a={c:8}```)。
+7.  该发布调用```.ready()``` 回调, 它向客户端发送 DDP 就绪消息。客户端上的订阅句柄标记为就绪。
+8.  观察者观察查询。通常, 它使用 MongoDB 的 Oplog 来通知影响查询的更改。如果它看到了相关的变化, 比如有了新匹配文档，或匹配文档中字段发生更改, 
+它就会调用订阅(```.added()，.changed()，.removed()```), 然后将更改发送到 mergebox, 再通过 DDP 向客户端传递。
+
+此操作将一直运行, 直到客户端停止订阅, 触发以下行为:
+
+1.  客户端发送取消订阅的DDP消息。
+2.  服务器停止其内部订阅对象, 触发以下行为:
+3.  任何由发布处理程序设置的回调```this.onStop()```将运行。在这种情况下, 它是一个单一的自动回调设置。当从处理程序返回游标时，它将停止查询观察器并在必要时对其进行清理。
+4.  由该订阅跟踪的所有文档都将从mergebox中删除, 这意味着可能会也可能不会把它们也从客户端中删除。
+5.  "无订阅"(nosub)消息将发送到客户端, 以指示订阅已停止。
+
+##  使用REST API
+
+在Meteor的DDP协议中, 发布和订阅是处理数据的主要方式, 但大量的数据源使用流行的 REST 协议做为它们的API。能够在两者之间进行转换是很有用的。
+
+### 从发布的REST端点加载数据
+
+作为使用低级API([low-level-api](https://guide.meteor.com/data-loading.html#custom-publication))的一个具体示例, 
+请考虑您有一些第三方 REST 端点的情况, 它提供了一组对用户有价值的不断变化的数据。如何使这些数据可用呢？
+
+一个选项是提供一个简单的到端点的代理方法, 轮询和处理不断变化的数据则是客户端的责任。因此, 处理数据的本地数据缓存、更改发生时更新UI等都是客户端的问题。
+尽管可以这样做(例如, 您可以使用本地集合来存储轮询数据), 但更简单、更自然的方法是创建一个为客户端进行该查询的发布。
+
+用于转变成轮询的REST端点的模式类似于:
+
+``` 
+const POLL_INTERVAL = 5000;
+Meteor.publish('polled-publication', function() {
+  const publishedKeys = {};
+  const poll = () => {
+    // Let's assume the data comes back as an array of JSON documents, with an _id field, for simplicity
+    const data = HTTP.get(REST_URL, REST_OPTIONS);
+    data.forEach((doc) => {
+      if (publishedKeys[doc._id]) {
+        this.changed(COLLECTION_NAME, doc._id, doc);
+      } else {
+        publishedKeys[doc._id] = true;
+        this.added(COLLECTION_NAME, doc._id, doc);
+      }
+    });
+  };
+  poll();
+  this.ready();
+  const interval = Meteor.setInterval(poll, POLL_INTERVAL);
+  this.onStop(() => {
+    Meteor.clearInterval(interval);
+  });
+});
+```
+
+事情会变得更复杂。例如, 您可能需要处理被删除的文档, 或者共享多个用户之间的轮询工作 (在轮询数据不是私有的情况下), 
+而不是对每个感兴趣的用户进行完全相同的轮询。
+
+### 以REST端点的形式访问发布
+
+如果要发布的数据有第三方使用, 通常是通过REST方式, 则会发生相反的情况。如果我们要发布的数据与我们通过发布提供的信息相同, 
+那么我们可以使用 [simple:rest](https://atmospherejs.com/simple/rest)包来很容易地做到这一点。
+
+在Todos示例应用程序中, 我们已经这样做了, 您现在可以通过 HTTP 访问我们的发布:
+
+``` 
+$ curl localhost:3000/publications/lists.public
+{
+  "Lists": [
+    {
+      "_id": "rBt5iZQnDpRxypu68",
+      "name": "Meteor Principles",
+      "incompleteCount": 7
+    },
+    {
+      "_id": "Qzc2FjjcfzDy3GdsG",
+      "name": "Languages",
+      "incompleteCount": 9
+    },
+    {
+      "_id": "TXfWkSkoMy6NByGNL",
+      "name": "Favorite Scientists",
+      "incompleteCount": 6
+    }
+  ]
+}
+```
+
+您还可以访问需要认证的发布 (如```list.private```)。假设我们已通过web面界注册了用户```user@example.com```, 并使用密码```password```，
+并创建了一个私有列表。于是, 我们可以这样访问它:
+
+``` 
+# First, we need to "login" on the commandline to get an access token
+$ curl localhost:3000/users/login  -H "Content-Type: application/json" --data '{"email": "user@example.com", "password": "password"}'
+{
+  "id": "wq5oLMLi2KMHy5rR6",
+  "token": "6PN4EIlwxuVua9PFoaImEP9qzysY64zM6AfpBJCE6bs",
+  "tokenExpires": "2016-02-21T02:27:19.425Z"
+}
+# Then, we can make an authenticated API call
+$ curl localhost:3000/publications/lists.private -H "Authorization: Bearer 6PN4EIlwxuVua9PFoaImEP9qzysY64zM6AfpBJCE6bs"
+{
+  "Lists": [
+    {
+      "_id": "92XAn3rWhjmPEga4P",
+      "name": "My Private List",
+      "incompleteCount": 5,
+      "userId": "wq5oLMLi2KMHy5rR6"
+    }
+  ]
+}
+```
+

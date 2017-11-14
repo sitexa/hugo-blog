@@ -13,7 +13,7 @@ googleAnalytics = "" #Enable Google Analytics by entering your tracking id
 
 [Author] # Used in authorbox
     name = "南方"
-    bio = "南方's true identiry is unkown. Maybe he is a successful blogger or writer."
+    bio = "南方's true identity is unkown. Maybe he is a successful blogger or writer."
     avatar = "img/avatar.png"
 
 [Params]

@@ -17,7 +17,7 @@ googleAnalytics = "" #Enable Google Analytics by entering your tracking id
     avatar = "img/avatar.png"
 
 [Params]
-    subtitle = "芝麻绿豆，鸡毛蒜皮，道听途说" # Subtitle of your site. Used in site header
+    subtitle = " 科学，技术，文学，艺术" # Subtitle of your site. Used in site header
     description = " 南方博客" # Description of your site.
     opengraph = true # Enable OpenGraph if true
     readmore = false  # Show "Read more" button in list if true

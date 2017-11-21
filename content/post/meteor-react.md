@@ -14,7 +14,7 @@ categories = [
     "Development",
     "nodejs",
 ]
-thumbnail = "images/meteor-guide/meteor-ux.jpg"
+thumbnail = "images/meteor-guide/meteor-react-logo.png"
 +++
 
 在Meteor中如何使用React——Facebook的前端渲染库。
@@ -28,6 +28,7 @@ thumbnail = "images/meteor-guide/meteor-ux.jpg"
 3.  如何将React集成进Meteor的实时数据层。
 4.  如何在React/Meteor应用中进行路由。
 
+--------
 ##  介绍
 
 [React](https://facebook.github.io/react/)是一个 JavaScript 库, 用于构建响应式用户界面, 由 Facebook 团队开发和分发。
@@ -51,18 +52,21 @@ React有一个充满活力和不断增长的生态系统, 在生产中广泛应�
 
 ### 在React中的Blaze模板
 
+---------------------
 ##  使用Meteor的数据系统
 
 ### 使用withTracker
 
 ### 防止重新渲染
 
+--------
 ##  路由
 
 ### Flow Router
 
 ### React Router
 
+------------------
 ##  Meteor 和 React
 
 ### 在Atmosphere中使用React

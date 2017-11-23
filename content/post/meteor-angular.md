@@ -14,5 +14,5 @@ categories = [
     "Development",
     "nodejs",
 ]
-thumbnail = "images/meteor-guide/angular-meteor.png"
+thumbnail = "images/meteor-guide/meteor-angular.png"
 +++

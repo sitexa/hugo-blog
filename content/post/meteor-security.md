@@ -1,5 +1,5 @@
 +++
-title = "Meteor(18):Meteor Security"
+title = "Meteor(18):Meteor安全"
 description = "How to secure your Meteor app."
 tags = [
     "JavaScript",

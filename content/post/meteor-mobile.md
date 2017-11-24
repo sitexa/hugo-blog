@@ -1,5 +1,5 @@
 +++
-title = "Meteor(16):Mobile"
+title = "Meteor(16):移动应用"
 description = "How to build mobile apps using Meteor's Cordova integration."
 tags = [
     "JavaScript",

@@ -1,5 +1,5 @@
 +++
-title = "Meteor(19):部署和监视"
+title = "Meteor(19):部署和监控"
 description = "How to deploy, run, and monitor your Meteor app in production."
 tags = [
     "JavaScript",

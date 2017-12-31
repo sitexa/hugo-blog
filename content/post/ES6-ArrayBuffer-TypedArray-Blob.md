@@ -9,7 +9,7 @@ categories = [
     "Development",
     "nodejs",
 ]
-thumbnail = "images/meteor-guide/whatsapp2.png"
+##thumbnail = "images/meteor-guide/whatsapp2.png"
 +++
 
 ES6提供了ArrayBuffer和TypedArray，让前端也可以直接操作编辑二进制数据， 网页中的类型为file的input标签， 也可以通过FileReader转化为二进制， 然后再做编辑。

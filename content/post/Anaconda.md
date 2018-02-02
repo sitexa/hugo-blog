@@ -5,7 +5,7 @@ tags = [
     "Python",
     "anaconda",
 ]
-date = "2017-11-01"
+date = "2018-02-02"
 categories = [
     "Development",
     "language",

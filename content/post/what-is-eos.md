@@ -11,6 +11,8 @@ categories = [
     "Development",
     "Technology",
 ]
+thumbnail = "images/eos/dpos_bft_opt.jpg"
+
 +++
 
 EOS是一种区块链技术，基本上类似于以太坊，由Dan Larrimer在2017年6月26日启动其ICO。 Dan Larrimer也是Steem和BitShares的创造者。

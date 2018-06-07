@@ -6,7 +6,7 @@ tags = [
     "EOS",
     "Dan Larimer"
 ]
-date = "2018-06-05"
+date = "2018-06-06"
 categories = [
     "Development",
     "Technology",

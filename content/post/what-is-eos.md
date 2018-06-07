@@ -14,11 +14,11 @@ categories = [
 thumbnail = "images/eos/dpos_bft_opt.jpg"
 
 +++
-转载自：WeUseCoins https://www.weusecoins.com/what-is-eos/
 
 EOS是一种区块链技术，基本上类似于以太坊，由Dan Larimer在2017年6月26日启动其ICO。 Dan Larimer也是Steem和BitShares的创造者。
 
 <!--more-->
+转载自：WeUseCoins https://www.weusecoins.com/what-is-eos/
 
 ## 什么是区块链
 

@@ -439,5 +439,3 @@ Dan Larimer借鉴了BitShares的经验教训，告诉Brave New Coin：“你需�
 ####    将Casper作为EOS智能合约
 
 Casper协议有两部分，提案机制和共识机制。 提案机制产生一系列连接在一起的区块，共识机制是每隔100个区块创建一个检查点。
-
-

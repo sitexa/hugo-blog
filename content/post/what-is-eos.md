@@ -1,5 +1,5 @@
 +++
-title = "区块链:什么是EOS？"
+title = "什么是EOS区块链？"
 description = "EOS is a blockchain technology basically like Ethereum which has been brought to life by Dan Larimer."
 tags = [
     "BlockChain",

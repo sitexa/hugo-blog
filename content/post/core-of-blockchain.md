@@ -39,7 +39,7 @@ thumbnail = "images/bc/consensus.png"
 
 ##  工作量证明（pow）
 
-![](images/bc/PoW.jpg)
+![](/images/bc/PoW.jpg)
 
 工作量证明是第一个成功的去中心化区块链共识算法，被比特币和其他的一些加密货币使用。
 

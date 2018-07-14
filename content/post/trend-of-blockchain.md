@@ -1,5 +1,5 @@
 +++
-title = "区块链的方向：人类将走向何方"
+title = "区块链之问：人类将走向何方"
 description = "区块链革命将把人类带向何方"
 tags = [
     "BlockChain"

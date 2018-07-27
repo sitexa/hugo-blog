@@ -1,5 +1,5 @@
 +++
-title = "eos学习与开发-01"
+title = "eos学习与开发-01:cleos"
 description = "eos学习与开发"
 tags = [
     "BlockChain",

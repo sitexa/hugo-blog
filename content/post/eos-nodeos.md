@@ -70,15 +70,110 @@ https://docs.google.com/spreadsheets/d/1K_un5Vak3eDh_b4Wdh43sOersuhs0A76HMCfeQpl
 
 ### 1,启动keosd
 
+``` 
+$keosd  #端口：8900
+
+$ cleos wallet keys
+[
+  "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV", #eosio
+  "EOS6svKHUmqCbB2crGc3sWHiYp5Ly1PNB82AzerverVJryZ5kt1H8", #key2
+  "EOS7WRsrqfvT9WmD7FBXSGg8goaofp7ho8o8mQaHmsirbhgFB3MHp", #inita
+  "EOS8Z7ei9yXTcEmWKTw3tsD8KMKs9Pv4uvC7NjyuBpQfnyicbQcLu"  #key1
+]
+```
+
 ### 2,创建default wallet
 
-导入eosio的private-key: ```cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3```
+wallet password:```PW5HyE8aBw4xE4iVbUCX5qahGEvEXSzc9s7oqZ9CKLPJZzsVdffaL```
+
+导入eosio的private-key: 
+```
+$cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+```
 
 ### 3,启动第一个生产节点
+```
+$nodeos --enable-stale-production --producer-name eosio --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin
+```
 
-```nodeos --enable-stale-production --producer-name eosio --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin```
+blocks目录中的内容：（文件大小不变）
+``` 
+$ ls -l nodeos/data/blocks/reversible
+total 24
+-rw-rw-r--  1 open  staff  356515840 Jul 28 18:13 shared_memory.bin
+-rw-rw-r--  1 open  staff       3376 Jul 28 18:13 shared_memory.meta
 
-或者使用配置文件config.ini。
+```
+
+state目录中的内容：(文件大小不变)
+``` 
+$ ls -l nodeos/data/state
+total 10352
+-rw-r--r--  1 open  staff        1313 Jul 28 18:13 forkdb.dat #nodeos运行时，没有这个文件。
+-rw-rw-r--  1 open  staff  1073741824 Jul 28 18:13 shared_memory.bin
+-rw-rw-r--  1 open  staff        3376 Jul 28 18:13 shared_memory.meta
+```
+
+或者使用配置文件config.ini: 
+
+``` 
+bnet-endpoint = 0.0.0.0:4321
+bnet-follow-irreversible = 0
+bnet-no-trx = false
+bnet-peer-log-format = ["${_name}" ${_ip}:${_port}]
+
+config-dir = "/Users/open/BlockChain/leos/gauss/config"
+data-dir = "/Users/open/BlockChain/leos/gauss/data"
+
+blocks-dir = "blocks"
+chain-state-db-size-mb = 1024
+reversible-blocks-db-size-mb = 340
+contracts-console = false
+
+https-client-validate-peers = 1
+http-server-address = 127.0.0.1:8888
+
+access-control-allow-credentials = false
+max-body-size = 1048576
+verbose-http-errors = false
+
+p2p-listen-endpoint = 0.0.0.0:9876
+p2p-max-nodes-per-host = 1
+agent-name = "EOS Gauss Agent"
+
+allowed-connection = any
+max-clients = 25
+connection-cleanup-period = 30
+network-version-match = 0
+sync-fetch-span = 100
+max-implicit-request = 1500
+use-socket-read-watermark = 0
+peer-log-format = ["${_name}" ${_ip}:${_port}]
+
+enable-stale-production = true
+pause-on-startup = false
+max-transaction-time = 30
+max-irreversible-block-age = -1
+
+producer-name = eosio 
+signature-provider = EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV=KEY:5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+keosd-provider-timeout = 5
+txn-reference-block-lag = 0
+
+wallet-dir = "."
+unlock-timeout = 900
+
+plugin = eosio::chain_plugin
+plugin = eosio::producer_plugin
+plugin = eosio::chain_api_plugin
+plugin = eosio::http_plugin
+plugin = eosio::history_api_plugin
+plugin = eosio::wallet_api_plugin
+```
+
+```
+$nodeos
+```
 
 ### 4，启动第二个生产节点
 
@@ -175,3 +270,52 @@ $cleos --url http://127.0.0.1:8889 get info #第二个节点，指定端口#8889
 -   speculative:包含有未确认的交易；低延迟，不可靠；
 -   head:仅包含最佳nodeos节点里的创建并签名了的区块；
 -   irreversible:仅包含已经确认的交易；
+
+##  总结
+
+在mac上，eosio的root为：```~/Library/Application Support/eosio```。所以，在启动nodeos时，```--config```， ```--data-dir```要使用绝对路径，
+否则，以eosio的root目录为相对目录。
+
+我们将节点目录放在~/BlockChain/leos下，建两个节点：gauss,love。
+
+``` 
+$ tree leos -L 3
+leos
+├── gauss
+│   ├── config
+│   │   └── config.ini
+│   └── data
+│       ├── blocks
+│       ├── default.wallet
+│       └── state
+└── love
+    ├── config
+    │   └── config.ini
+    └── data
+        ├── blocks
+        └── state
+```
+
+-   1，启动keosd
+
+默认钱包目录：```~/eosio-wallet```
+
+-   2，启动第一个节点(生产节点)
+
+``` 
+$nodeos --config "/Users/open/BlockChain/leos/gauss/config/config.ini" --data-dir "/Users/open/BlockChain/leos/gauss/data"
+```
+
+-   3，启动第二个节点（非生产节点）
+
+``` 
+$nodeos --config "/Users/open/BlockChain/leos/love/config/config.ini" --data-dir "/Users/open/BlockChain/leos/love/data"
+```
+
+-   4，更改生产节点：将第二个节点改为生产节点。
+
+``` 
+$cleos push action eosio setprods "{ \"schedule\": [{\"producer_name\": \"inita\",\"block_signing_key\": \"EOS7WRsrqfvT9WmD7FBXSGg8goaofp7ho8o8mQaHmsirbhgFB3MHp\"}]}" -p eosio@active
+Error 3070002: Runtime Error Processing WASM
+```
+**运行命令出错？？？**

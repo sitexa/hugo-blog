@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a791396-52ca-48be-b3b6-b7ded36f12b1" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-779614590">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="6" />
+          <entry key="toml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="6" />
+          <entry key="TOML file" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="75" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="75" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/post/blockchain-analyst.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="2263">
+                <caret line="167" column="28" lean-forward="true" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/post/Anaconda.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/post/system-architect.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>模式</find>
+      <find>规范化</find>
+      <find>Larimer</find>
+      <find>Larrimer</find>
+      <find>分配</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>集合</replace>
+      <replace>架构</replace>
+      <replace>反规范化</replace>
+      <replace>通诈</replace>
+      <replace>派发</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/content/post/meteor-method.md" />
+        <option value="$PROJECT_DIR$/themes/mainroad/static/css/style.css" />
+        <option value="$PROJECT_DIR$/content/post/meteor-accounts.md" />
+        <option value="$PROJECT_DIR$/content/post/油腻腻的中年.md" />
+        <option value="$PROJECT_DIR$/config.toml" />
+        <option value="$PROJECT_DIR$/content/post/meteor-view.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-url-route.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-ui-ux.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-blaze.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-react.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-angular.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-build.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-atmosphere-2.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-atmosphere.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-npm.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-build-system.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-security.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-mobile.md" />
+        <option value="$PROJECT_DIR$/content/post/WhatsApp-meteor-ionic-angular.md" />
+        <option value="$PROJECT_DIR$/content/post/ES6-ArrayBuffer-TypedArray-Blob.md" />
+        <option value="$PROJECT_DIR$/content/post/migrate-from-jekyll.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-test.md" />
+        <option value="$PROJECT_DIR$/content/post/meteor-deploy.md" />
+        <option value="$PROJECT_DIR$/content/post/人生之路--从平贫到首富.md" />
+        <option value="$PROJECT_DIR$/content/post/人生之路--不与平凡为敌.md" />
+        <option value="$PROJECT_DIR$/content/post/react-road.md" />
+        <option value="$PROJECT_DIR$/content/post/Anaconda.md" />
+        <option value="$PROJECT_DIR$/content/post/Pandas.md" />
+        <option value="$PROJECT_DIR$/content/post/what-is-eos.md" />
+        <option value="$PROJECT_DIR$/content/post/eos-whitepaper-v2.md" />
+        <option value="$PROJECT_DIR$/content/post/what-is-ico.md" />
+        <option value="$PROJECT_DIR$/content/post/idea-of-blockchain.md" />
+        <option value="$PROJECT_DIR$/content/post/core-of-blockchain.md" />
+        <option value="$PROJECT_DIR$/content/post/EOS-bios-boot-sequence.md" />
+        <option value="$PROJECT_DIR$/content/post/ico-of-blockchain.md" />
+        <option value="$PROJECT_DIR$/content/post/trend-of-blockchain.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-terms.md" />
+        <option value="$PROJECT_DIR$/content/post/eos-terms.md" />
+        <option value="$PROJECT_DIR$/content/post/eos-cleos.md" />
+        <option value="$PROJECT_DIR$/content/post/eos-nodeos.md" />
+        <option value="$PROJECT_DIR$/content/post/eos-contract.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-p2p.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-cryptography.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-analyst.md" />
+        <option value="$PROJECT_DIR$/content/post/holochain-greenpaper.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-distributed.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-consensus.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-gauseio.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-ten-years.md" />
+        <option value="$PROJECT_DIR$/content/post/blockchain-10years.md" />
+        <option value="$PROJECT_DIR$/content/post/system-architect.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="42" />
+    <option name="y" value="23" />
+    <option name="width" value="1238" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugo-blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugo-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugo-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugo-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/post" />
+      <recent name="$PROJECT_DIR$/static/images/bc" />
+      <recent name="$PROJECT_DIR$/static/images/ico" />
+      <recent name="$PROJECT_DIR$/static/images/eos" />
+      <recent name="$PROJECT_DIR$/static/images/meteor-guide" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images/python" />
+      <recent name="$PROJECT_DIR$/static/images/meteor-guide" />
+      <recent name="$PROJECT_DIR$/content/post" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SFDebugLogsSettingsComponent">
+    <traceFlagActivationTasks>
+      <traceFlagActivationTask presentableText="20 minutes" timeInMinutes="20" />
+      <traceFlagActivationTask presentableText="2 hours" timeInMinutes="120" />
+      <traceFlagActivationTask presentableText="8 hours" timeInMinutes="480" />
+      <traceFlagActivationTask presentableText="24 hours" timeInMinutes="1440" />
+    </traceFlagActivationTasks>
+  </component>
+  <component name="SFStoredExecutionPersistentComponent">
+    <executions>
+      <execution name="Default" sourceToExecute="" />
+    </executions>
+    <lastSelectedExecutionName>Default</lastSelectedExecutionName>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a791396-52ca-48be-b3b6-b7ded36f12b1" name="Default" comment="" />
+      <created>1508903758907</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1508903758907</updated>
+      <workItem from="1508903765097" duration="348000" />
+      <workItem from="1508905374688" duration="2226000" />
+      <workItem from="1508912192103" duration="211000" />
+      <workItem from="1508912678769" duration="4396000" />
+      <workItem from="1508989275566" duration="689000" />
+      <workItem from="1509282578756" duration="5180000" />
+      <workItem from="1509328493725" duration="6038000" />
+      <workItem from="1509419310099" duration="4994000" />
+      <workItem from="1509522228286" duration="475000" />
+      <workItem from="1509522737290" duration="610000" />
+      <workItem from="1509523414620" duration="2932000" />
+      <workItem from="1509526387883" duration="24130000" />
+      <workItem from="1509585650445" duration="3158000" />
+      <workItem from="1509590054619" duration="19905000" />
+      <workItem from="1509668996400" duration="36720000" />
+      <workItem from="1509768122407" duration="1267000" />
+      <workItem from="1509770192972" duration="59263000" />
+      <workItem from="1510171735208" duration="41289000" />
+      <workItem from="1510475799352" duration="50420000" />
+      <workItem from="1510885556354" duration="12382000" />
+      <workItem from="1510970785000" duration="873000" />
+      <workItem from="1510976159319" duration="52732000" />
+      <workItem from="1511274080605" duration="20444000" />
+      <workItem from="1511838913229" duration="18814000" />
+      <workItem from="1511951379261" duration="47000" />
+      <workItem from="1511952041401" duration="5040000" />
+      <workItem from="1511968933380" duration="254000" />
+      <workItem from="1511969230097" duration="281000" />
+      <workItem from="1513240463399" duration="697000" />
+      <workItem from="1514257733912" duration="1723000" />
+      <workItem from="1514683235848" duration="1728000" />
+      <workItem from="1514693556918" duration="360000" />
+      <workItem from="1514773114242" duration="1844000" />
+      <workItem from="1515114273651" duration="4531000" />
+      <workItem from="1516325019657" duration="4013000" />
+      <workItem from="1517196366052" duration="13203000" />
+      <workItem from="1517542658419" duration="5303000" />
+      <workItem from="1524792281729" duration="1122000" />
+      <workItem from="1528181637715" duration="59679000" />
+      <workItem from="1528683737623" duration="2962000" />
+      <workItem from="1528805587831" duration="2026000" />
+      <workItem from="1529662553885" duration="7005000" />
+      <workItem from="1530083506340" duration="22015000" />
+      <workItem from="1531016143170" duration="3531000" />
+      <workItem from="1531447645400" duration="10661000" />
+      <workItem from="1531560983169" duration="3534000" />
+      <workItem from="1532490718806" duration="6493000" />
+      <workItem from="1532541803129" duration="33606000" />
+      <workItem from="1532921564478" duration="823000" />
+      <workItem from="1534030763844" duration="10360000" />
+      <workItem from="1534216712125" duration="53727000" />
+      <workItem from="1534764658045" duration="67000" />
+      <workItem from="1541023111974" duration="2898000" />
+      <workItem from="1548924293509" duration="1627000" />
+      <workItem from="1551090176008" duration="1312000" />
+    </task>
+    <task id="LOCAL-00051" summary="meteor ux">
+      <created>1511237421368</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1511237421369</updated>
+    </task>
+    <task id="LOCAL-00052" summary="meteor ux">
+      <created>1511238238710</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1511238238710</updated>
+    </task>
+    <task id="LOCAL-00053" summary="meteor build">
+      <created>1511411048781</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1511411048782</updated>
+    </task>
+    <task id="LOCAL-00054" summary="meteor security and deploy">
+      <created>1511511625604</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1511511625604</updated>
+    </task>
+    <task id="LOCAL-00055" summary="meteor security and deploy">
+      <created>1511511679985</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1511511679986</updated>
+    </task>
+    <task id="LOCAL-00056" summary="meteor security and deploy">
+      <created>1511511723636</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1511511723636</updated>
+    </task>
+    <task id="LOCAL-00057" summary="meteor security and deploy">
+      <created>1511511796471</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1511511796471</updated>
+    </task>
+    <task id="LOCAL-00058" summary="es6 and whatsapp">
+      <created>1514684291019</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1514684291020</updated>
+    </task>
+    <task id="LOCAL-00059" summary="es6 and whatsapp">
+      <created>1514684788198</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1514684788198</updated>
+    </task>
+    <task id="LOCAL-00060" summary="es6 and whatsapp">
+      <created>1514685006311</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1514685006311</updated>
+    </task>
+    <task id="LOCAL-00061" summary="remove migration post from menu">
+      <created>1514773710410</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1514773710412</updated>
+    </task>
+    <task id="LOCAL-00062" summary="deploy meteor application">
+      <created>1515119900773</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1515119900773</updated>
+    </task>
+    <task id="LOCAL-00063" summary="人生哲理">
+      <created>1516328875194</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1516328875195</updated>
+    </task>
+    <task id="LOCAL-00064" summary="接受平凡">
+      <created>1516333810477</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1516333810477</updated>
+    </task>
+    <task id="LOCAL-00065" summary="hacker news">
+      <created>1517238492683</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1517238492684</updated>
+    </task>
+    <task id="LOCAL-00066" summary="anaconda">
+      <created>1517547521983</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1517547521984</updated>
+    </task>
+    <task id="LOCAL-00067" summary="anaconda">
+      <created>1517552617059</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1517552617059</updated>
+    </task>
+    <task id="LOCAL-00068" summary="eos">
+      <created>1528296191805</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1528296191806</updated>
+    </task>
+    <task id="LOCAL-00069" summary="eos">
+      <created>1528296654372</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1528296654372</updated>
+    </task>
+    <task id="LOCAL-00070" summary="eos">
+      <created>1528296675698</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1528296675698</updated>
+    </task>
+    <task id="LOCAL-00071" summary="eos">
+      <created>1528381661246</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1528381661246</updated>
+    </task>
+    <task id="LOCAL-00072" summary="eos">
+      <created>1528384401487</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1528384401487</updated>
+    </task>
+    <task id="LOCAL-00073" summary="eos">
+      <created>1528384518401</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1528384518401</updated>
+    </task>
+    <task id="LOCAL-00074" summary="eos white paper v2">
+      <created>1528386581758</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1528386581758</updated>
+    </task>
+    <task id="LOCAL-00075" summary="eos white paper v2">
+      <created>1528386624995</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1528386624995</updated>
+    </task>
+    <task id="LOCAL-00076" summary="eos white paper v2">
+      <created>1528386728556</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1528386728556</updated>
+    </task>
+    <task id="LOCAL-00077" summary="eos white paper v2">
+      <created>1528386885690</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1528386885690</updated>
+    </task>
+    <task id="LOCAL-00078" summary="ico">
+      <created>1528686153822</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1528686153823</updated>
+    </task>
+    <task id="LOCAL-00079" summary="ico">
+      <created>1528686481102</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1528686481102</updated>
+    </task>
+    <task id="LOCAL-00080" summary="blockchain">
+      <created>1528807788220</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1528807788221</updated>
+    </task>
+    <task id="LOCAL-00081" summary="consensus">
+      <created>1529679020240</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1529679020241</updated>
+    </task>
+    <task id="LOCAL-00082" summary="consensus">
+      <created>1529679592381</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1529679592381</updated>
+    </task>
+    <task id="LOCAL-00083" summary="eos bios boot sequence">
+      <created>1530167513891</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1530167513892</updated>
+    </task>
+    <task id="LOCAL-00084" summary="concept of blockchain">
+      <created>1530195315294</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1530195315295</updated>
+    </task>
+    <task id="LOCAL-00085" summary="delete --extra-issue 10000">
+      <created>1530196354739</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1530196354739</updated>
+    </task>
+    <task id="LOCAL-00086" summary="token &amp; ico">
+      <created>1531024193749</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1531024193750</updated>
+    </task>
+    <task id="LOCAL-00087" summary="trend">
+      <created>1531539270864</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1531539270865</updated>
+    </task>
+    <task id="LOCAL-00088" summary="trend">
+      <created>1531539803977</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1531539803977</updated>
+    </task>
+    <task id="LOCAL-00089" summary="eos study 01">
+      <created>1532665486655</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1532665486656</updated>
+    </task>
+    <task id="LOCAL-00090" summary="eos study 01">
+      <created>1532665614262</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1532665614262</updated>
+    </task>
+    <task id="LOCAL-00091" summary="nodeos">
+      <created>1532697226088</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1532697226088</updated>
+    </task>
+    <task id="LOCAL-00092" summary="nodeos">
+      <created>1532697805583</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1532697805583</updated>
+    </task>
+    <task id="LOCAL-00093" summary="nodeos">
+      <created>1534044272940</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1534044272941</updated>
+    </task>
+    <task id="LOCAL-00094" summary="nodeos">
+      <created>1534058020816</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1534058020816</updated>
+    </task>
+    <task id="LOCAL-00095" summary="analysis">
+      <created>1534262867237</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1534262867238</updated>
+    </task>
+    <task id="LOCAL-00096" summary="analysis">
+      <created>1534296773853</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1534296773853</updated>
+    </task>
+    <task id="LOCAL-00097" summary="analysis">
+      <created>1534305277305</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1534305277305</updated>
+    </task>
+    <task id="LOCAL-00098" summary="analysis">
+      <created>1534393124292</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1534393124292</updated>
+    </task>
+    <task id="LOCAL-00099" summary="analysis">
+      <created>1534393715492</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1534393715492</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="631968000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="42" y="23" width="1238" height="777" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19816053" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="MaxCompute Job Explorer" order="2" />
+      <window_info id="MaxCompute Project Explorer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Project Explorer" order="5" />
+      <window_info id="Job Explorer" order="6" />
+      <window_info id="DB Browser" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32847896" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50996375" side_tool="true" weight="0.32743362" />
+      <window_info anchor="bottom" id="SFDX" order="8" weight="0.32847896" />
+      <window_info anchor="bottom" id="Debug Logs" order="9" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="10" weight="0.32847896" />
+      <window_info anchor="bottom" id="MaxCompute Job" order="11" />
+      <window_info anchor="bottom" id="Salesforce" order="12" weight="0.32847896" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32847896" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.49003622" weight="0.37009063" />
+      <window_info anchor="bottom" id="MaxCompute Console" order="16" />
+      <window_info anchor="bottom" id="Log Manager" order="17" weight="0.32847896" />
+      <window_info anchor="bottom" id="Docker" order="18" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="19" />
+      <window_info anchor="bottom" id="Console" order="20" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.19698398" />
+      <window_info anchor="right" id="FAQ Robot" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19937369" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="MaxCompute Job Explorer" order="2" />
+      <window_info id="MaxCompute Project Explorer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Project Explorer" order="5" />
+      <window_info id="Job Explorer" order="6" />
+      <window_info id="DB Browser" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32847896" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50996375" side_tool="true" weight="0.32743362" />
+      <window_info anchor="bottom" id="SFDX" order="8" weight="0.32847896" />
+      <window_info anchor="bottom" id="Debug Logs" order="9" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="10" weight="0.32847896" />
+      <window_info anchor="bottom" id="MaxCompute Job" order="11" />
+      <window_info anchor="bottom" id="Salesforce" order="12" weight="0.32847896" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32847896" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" sideWeight="0.49003622" visible="true" weight="0.37168142" />
+      <window_info anchor="bottom" id="MaxCompute Console" order="16" />
+      <window_info anchor="bottom" id="Log Manager" order="17" weight="0.32847896" />
+      <window_info anchor="bottom" id="Docker" order="18" show_stripe_button="false" />
+      <window_info anchor="bottom" id="DB Execution Console" order="19" />
+      <window_info anchor="bottom" id="Console" order="20" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.19698398" />
+      <window_info anchor="right" id="FAQ Robot" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="reformat" />
+    <MESSAGE value="meteor router" />
+    <MESSAGE value="meteor ux" />
+    <MESSAGE value="meteor build" />
+    <MESSAGE value="meteor security and deploy" />
+    <MESSAGE value="es6 and whatsapp" />
+    <MESSAGE value="remove migration post from menu" />
+    <MESSAGE value="deploy meteor application" />
+    <MESSAGE value="人生哲理" />
+    <MESSAGE value="接受平凡" />
+    <MESSAGE value="hacker news" />
+    <MESSAGE value="anaconda" />
+    <MESSAGE value="eos" />
+    <MESSAGE value="eos white paper v2" />
+    <MESSAGE value="ico" />
+    <MESSAGE value="blockchain" />
+    <MESSAGE value="consensus" />
+    <MESSAGE value="eos bios boot sequence" />
+    <MESSAGE value="concept of blockchain" />
+    <MESSAGE value="delete --extra-issue 10000" />
+    <MESSAGE value="token &amp; ico" />
+    <MESSAGE value="trend" />
+    <MESSAGE value="eos study 01" />
+    <MESSAGE value="nodeos" />
+    <MESSAGE value="analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="analysis" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/themes/mainroad/layouts/partials/widgets/social.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mainroad/layouts/partials/comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/WhatsApp-meteor-ionic-angular.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-end-line="14" selection-end-column="47" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/Pandas.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/idea-of-blockchain.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="960">
+            <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/creating-a-new-theme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-3540" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/eos-whitepaper-v2.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-642">
+            <caret line="79" selection-start-line="79" selection-end-line="79" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/EOS-bios-boot-sequence.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="450">
+            <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/what-is-ico.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="371">
+            <caret line="164" column="19" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/ico-of-blockchain.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-777">
+            <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/core-of-blockchain.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="258">
+            <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/trend-of-blockchain.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-token-001.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-token-002.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-token-003.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-wp-1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-wp-2.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-wp-3.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-token.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/dpos_bft_opt.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/eos/eos-formula.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-terms.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="255">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/三权分置.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-484" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/what-is-eos.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-817">
+            <caret line="21" selection-start-line="21" selection-end-line="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/生命.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-664" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/eos-cleos.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-p2p.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/xuxp.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/trend.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/PoW.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/eos-nodeos.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="4456">
+            <caret line="301" selection-start-line="301" selection-end-line="301" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/eos-contract.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/holochain-greenpaper.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="765">
+            <caret line="51" selection-start-line="51" selection-end-line="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/consensus.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/btc-wealth.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/bc.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-distributed.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-cryptography.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1196">
+            <caret line="857" column="21" selection-start-line="857" selection-start-column="21" selection-end-line="857" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-consensus.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-gauseio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bc/bitcoin-blockchain.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-ten-years.md" />
+    <entry file="file://$PROJECT_DIR$/themes/mainroad/theme.toml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mainroad/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mainroad/exampleSite/config.toml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-10years.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="300">
+            <caret line="20" selection-start-line="20" selection-end-line="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/blockchain-analyst.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="2263">
+            <caret line="167" column="28" lean-forward="true" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/Anaconda.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/system-architect.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

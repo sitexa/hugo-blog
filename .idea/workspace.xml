@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a791396-52ca-48be-b3b6-b7ded36f12b1" name="Default" comment="" />
+    <list default="true" id="7a791396-52ca-48be-b3b6-b7ded36f12b1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/content/post/goit/container.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/post/goit/container.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,25 +27,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="48" />
+          <entry key="md" value="51" />
           <entry key="toml" value="5" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="48" />
+          <entry key="Markdown" value="51" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="TOML file" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="214" />
+          <entry key="md" value="215" />
           <entry key="toml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="214" />
+          <entry key="Markdown" value="215" />
           <entry key="TOML file" value="14" />
         </counts>
       </usages-collector>
@@ -135,12 +139,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/post/es/spring-es-api.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="180">
                 <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/post/es/synonyms.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/post/goit/container.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="181">
+                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -211,7 +232,6 @@
         <option value="$PROJECT_DIR$/content/post/goit/dev-env.md" />
         <option value="$PROJECT_DIR$/content/post/goit/product-platform.md" />
         <option value="$PROJECT_DIR$/content/post/goit/dev-plan.md" />
-        <option value="$PROJECT_DIR$/content/post/goit/container.md" />
         <option value="$PROJECT_DIR$/content/post/goit/base-service.md" />
         <option value="$PROJECT_DIR$/content/post/goit/architecture.md" />
         <option value="$PROJECT_DIR$/content/post/es/es-ref.md" />
@@ -222,6 +242,7 @@
         <option value="$PROJECT_DIR$/content/post/es/mapping.md" />
         <option value="$PROJECT_DIR$/content/post/es/query-api.md" />
         <option value="$PROJECT_DIR$/content/post/es/spring-es-api.md" />
+        <option value="$PROJECT_DIR$/content/post/goit/container.md" />
       </list>
     </option>
   </component>
@@ -269,6 +290,13 @@
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="post" type="462c0819:PsiDirectoryNode" />
               <item name="es" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugo-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="goit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hugo-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -422,7 +450,7 @@
       <workItem from="1541023111974" duration="2898000" />
       <workItem from="1548924293509" duration="1627000" />
       <workItem from="1551090176008" duration="1312000" />
-      <workItem from="1554427643931" duration="3792000" />
+      <workItem from="1554427643931" duration="3904000" />
     </task>
     <task id="LOCAL-00051" summary="meteor ux">
       <created>1511237421368</created>
@@ -771,7 +799,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="635760000" />
+    <option name="totallyTimeSpent" value="635872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -896,22 +924,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="analysis" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/images/bc/bc.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/post/blockchain-cryptography.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1196">
-            <caret line="857" column="21" selection-start-line="857" selection-start-column="21" selection-end-line="857" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/bc/bitcoin-blockchain.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/post/blockchain-ten-years.md" />
     <entry file="file://$PROJECT_DIR$/themes/mainroad/theme.toml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1099,16 +1111,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1240">
             <caret selection-end-line="14" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/post/goit/container.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1313">
-            <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>
@@ -1322,11 +1324,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/es/sql-access.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/content/post/es/spring-es-api.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
             <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/es/xpack.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/es/synonyms.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/goit/container.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="181">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           </first_editor>
           <second_editor />
         </state>

@@ -15,6 +15,7 @@ categories = [
 1.  注册发现服务：go-eureka(8761)
 2.  统一配置服务：go-config(8888)
 3.  应用网关：go-gateway(9000)
+
 <!--more-->
 
 # 容器平台
